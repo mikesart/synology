@@ -1,0 +1,13 @@
+export XXX=$(pwd)
+
+export CC=${XXX}/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-gcc
+export LD=${XXX}/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-ld
+export RANLIB=${XXX}/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-ranlib
+export CFLAGS="-I${XXX}/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/usr/include -Wall -mfloat-abi=hard -mtune=cortex-a15 -mfpu=neon-vfpv4 -mthumb"
+export LDFLAGS="-L${XXX}/arm-unknown-linux-gnueabi/arm-unknown-linux-gnueabi/sysroot/lib"
+
+# ./configure \
+#     --host=arm-cortex_a15-linux-gnueabi \
+#     --target=arm-cortex_a15-linux-gnueabi \
+#     --build=i686-pc-linux" \
+#     --prefix=/usr/local
